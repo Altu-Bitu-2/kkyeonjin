@@ -27,6 +27,7 @@ int main() {
             cin >> num;
             cout << note1.count(num) << '\n';
         }
+        note1.clear();
     }
 
 }
