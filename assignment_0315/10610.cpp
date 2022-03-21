@@ -24,14 +24,15 @@ int main() {
         sum += num[i];
     }
 
+    sort(num.begin(), num.end(), greater<>());
+
     //각 자릿수 합이 3의 배수가 아닌 경우, 입력한 숫자에 0이 포함되지 않은 경우 -1 출력
-    if(find(num.begin(), num.end(), 0) == num.end() || sum % 3 != 0) {
+    if(num[num.size()-1] != 0 || sum % 3 != 0) {
         cout << -1 ;
     }
 
     //내림차순 정렬 (가장 큰 30의 배수 출력 위해) 후 출력
     else {
-        sort(num.begin(), num.end(), greater<>());
         for (int i = 0; i < num.size(); i++) {
             cout << num[i];
         }

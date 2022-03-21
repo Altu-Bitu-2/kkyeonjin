@@ -26,7 +26,7 @@ int main() {
     int ab = lcm / gcd;
 
     // 1부터 sqrt(ab) 전까지 순회하며 ab의 약수 찾기
-    for(int i = 1; i < sqrt(ab); i++) {
+    for(int i = 1; i <= sqrt(ab); i++) {
         if((ab % i) == 0) {
             a = i;
             b = (ab/i);
