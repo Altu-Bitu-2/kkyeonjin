@@ -30,14 +30,15 @@ int main() {
 
     //끝에서부터 두 문자열 더하기
     for(int i = A.length() - 1; i >= 0; i--) {
-
         int res = (B[i] - '0') + (A[i] - '0');
         //연산 결과의 1의 자리만 result에 넣기 위해 모듈러 연산
         result.push_back((res+carry) % 10);
-        carry = 0;
         //10이 넘으면 carry를 1로, carry 값은 다음 번 연산에서 더해짐
-        if(res >= 10) {
-            carry = 1;
+        if(res + carry >= 10) {
+            carry = (res + carry) / 10;
+        }
+        else{
+            carry = 0;
         }
     }
 
