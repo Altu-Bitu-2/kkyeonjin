@@ -1,10 +1,7 @@
 //
-<<<<<<< Updated upstream
+
 // Created by r4356 on 2022-03-30.
-=======
-// Created by r4356 on 2022-04-01.
->>>>>>> Stashed changes
-//
+
 #include <iostream>
 
 using namespace std;
@@ -16,13 +13,6 @@ int answer = 10000001;
 
 void backtracking(int start, int cnt, int money) {
 
-<<<<<<< Updated upstream
-    if(cnt == n ) {
-        if(w[start][0] != 0) {
-            money += w[start][0];
-        }
-        answer = min(answer, money);
-=======
     if(money >= answer) {
         return;
     }
@@ -32,7 +22,6 @@ void backtracking(int start, int cnt, int money) {
             money += w[start][0];
             answer = min(answer, money);
         }
->>>>>>> Stashed changes
         return;
     }
 
@@ -41,10 +30,7 @@ void backtracking(int start, int cnt, int money) {
             money += w[start][i];
             check[i] = true;
             backtracking(i, cnt+1, money);
-<<<<<<< Updated upstream
-=======
             money -= w[start][i];
->>>>>>> Stashed changes
             check[i] = false;
         }
     }
