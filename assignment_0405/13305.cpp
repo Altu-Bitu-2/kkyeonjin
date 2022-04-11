@@ -8,12 +8,12 @@ int n;
 long long price[100000];
 long long dist[100000];
 
-int solve() {
+long long solve() {
     long long sum = 0;
     //리터당 가격은 1000000000 이하
     long long cheaper_price = 1000000001;
 
-    for(int i = 0; i < n; i++) {
+    for(int i = 0; i < n-1; i++) {
         if(price[i] < cheaper_price) {
             sum += price[i] * dist[i+1];
             cheaper_price = price[i];
